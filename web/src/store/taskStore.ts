@@ -8,13 +8,14 @@ export class TaskStore {
    *
    * @param title タスク名
    */
-  public add(title: string): void {
+  public add(title: string): Task {
     const trimmedTitle = title.trim();
     if (trimmedTitle === '') {
       throw new Error('タスク名を入力してください');
     }
 
     this.tasks = [...this.tasks, createTask(trimmedTitle)]; // 非破壊的に変更。
+    return this.tasks[this.tasks.length - 1];
   }
 
   /**
