@@ -10,7 +10,7 @@
   <div class="container">
     <div class="card">
       <h1>TaskPilot</h1>
-      <p class="small">Week 1: this / prototype を実装で理解する</p>
+      <p class="small">TaskStore 動作確認（Week 1）</p>
 
       <form id="task-form" class="row" autocomplete="off">
         <input id="task-input" placeholder="タスク名" required />
@@ -20,14 +20,13 @@
       </form>
 
       <table class="table">
-        <thead><tr><th>ID</th><th>タイトル</th><th>操作</th></tr></thead>
+        <thead>
+          <tr><th>ID</th><th>タイトル</th><th>操作</th></tr>
+        </thead>
         <tbody id="task-rows"></tbody>
       </table>
 
-      <div class="row">
-        <button type="button" id="debug-proto" class="ghost">prototype観察</button>
-        <span class="small" id="debug-out"></span>
-      </div>
+      <p class="small" id="error" style="margin-top:12px;"></p>
     </div>
   </div>
 
